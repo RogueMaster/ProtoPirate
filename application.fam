@@ -16,6 +16,7 @@ App(
     #  fap_weburl="https://protopirate.net/ProtoPirate/ProtoPirate",
     fap_version="3.0.2",
     fap_description="Decode car key fob signals from Sub-GHz",
+    cdefines=["ENABLE_EMULATE_FEATURE"],
 )
 
 App(
@@ -30,7 +31,7 @@ App(
     fap_icon_assets="images",
     fap_file_assets="keystore",
     fap_icon_assets_symbol="proto_pirate",
-    cdefines=["ENABLE_SUB_DECODE_SCENE", "ENABLE_TIMING_TUNER_SCENE"],
+    cdefines=["ENABLE_SUB_DECODE_SCENE", "ENABLE_TIMING_TUNER_SCENE", "ENABLE_EMULATE_FEATURE"],
     fap_category="Sub-GHz",
     fap_version="3.0.2",
 )
@@ -58,6 +59,7 @@ App(
         "protocols/vag.c",
         "protocols/star_line.c",
     ],
+    cdefines=["ENABLE_EMULATE_FEATURE"],
     fal_embedded=True,
 )
 
@@ -86,6 +88,7 @@ App(
         "protocols/psa.c",
         "protocols/psa_crypto.c",
     ],
+    cdefines=["ENABLE_EMULATE_FEATURE"],
     fal_embedded=True,
 )
 
@@ -97,6 +100,7 @@ App(
     sources=[
         "scenes/plugins/protopirate_emulate_plugin.c",
     ],
+    cdefines=["ENABLE_EMULATE_FEATURE"],
     fal_embedded=True,
 )
 
